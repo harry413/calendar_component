@@ -109,7 +109,7 @@ function Nail() {
 function WireRings() {
   return (
     <div
-      className="flex justify-center gap-3 px-3 relative z-10"
+      className="flex justify-center gap-2 md:gap-3 px-3 relative z-10"
       style={{ marginTop: -2 }}
     >
       {Array.from({ length: 30 }).map((_, i) => (
