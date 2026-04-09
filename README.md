@@ -1,16 +1,150 @@
-# React + Vite
+# 📅 Interactive Wall Calendar Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A polished, responsive React/Next.js calendar component inspired by a physical wall calendar design. This component blends aesthetics with functionality, featuring a hero image, date range selection, and an integrated notes section.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+### 🎨 Wall Calendar Aesthetic
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Spiral binding effect at the top
+* Hero image with angled overlay
+* Month and year displayed over the image
+* Clean, print-inspired layout
 
-## Expanding the ESLint configuration
+### 📆 Date Range Selection
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Click to select **start date**
+* Click again to select **end date**
+* Visual states:
+
+  * Start date (highlighted)
+  * End date (distinct highlight)
+  * Range (soft background)
+
+### 📝 Notes Section
+
+* Minimal lined notes area inspired by physical calendars
+* Can be extended to support editable notes
+
+### 📱 Fully Responsive
+
+* Mobile-first design
+* Stacked layout on small screens
+* Compact grid for better usability on touch devices
+
+---
+
+## 🛠 Tech Stack
+
+* **React / Next.js**
+* **Tailwind CSS**
+* **date-fns** for date utilities
+
+---
+
+## 📦 Installation
+
+```bash
+npm install date-fns
+```
+
+If using Tailwind CSS:
+
+```bash
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+---
+
+## ▶️ Usage
+
+Import and use the component:
+
+```jsx
+import WallCalendar from "./WallCalendar";
+
+export default function Page() {
+  return <WallCalendar />;
+}
+```
+
+---
+
+## 🧠 Component Behavior
+
+### Date Selection Logic
+
+* First click → sets `startDate`
+* Second click → sets `endDate`
+* Clicking again resets selection
+
+### Month Navigation
+
+* Uses `addMonths()` from date-fns
+* "Prev" and "Next" buttons update the current view
+
+---
+
+## 🎯 Design Decisions
+
+* **Minimal UI** to match physical calendar feel
+* **Compact grid** for readability
+* **Soft color palette** for better UX
+* **Visual hierarchy** prioritizing image and month
+
+---
+
+## ✨ Possible Enhancements
+
+* Drag-to-select date ranges
+* Editable notes with persistence (localStorage / backend)
+* Theme adaptation based on hero image
+* Holiday/event indicators
+* Page flip animations for month transitions
+
+---
+
+## 📁 Project Structure
+
+```
+/components
+  └── WallCalendar.jsx
+```
+
+---
+
+## 🧪 Future Improvements
+
+* Add TypeScript support
+* Improve accessibility (ARIA roles, keyboard navigation)
+* Add unit tests (Jest / React Testing Library)
+
+---
+
+## 📸 Inspiration
+
+This component is inspired by a modern wall calendar layout featuring:
+
+* Strong visual imagery
+* Structured date grid
+* Integrated notes section
+
+---
+
+## 🏁 Conclusion
+
+This project demonstrates the ability to:
+
+* Translate static design into a functional UI
+* Build responsive layouts
+* Implement interactive date selection logic
+* Balance design and usability
+
+---
+
+## 👨‍💻 Author
+
+Frontend Engineering Challenge Submission
